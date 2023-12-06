@@ -1,3 +1,5 @@
+using WebApplicationBilling.Repository;
+using WebApplicationBilling.Repository.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -5,6 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 //Habilitar el cliente Http
 builder.Services.AddHttpClient();
+
+
+builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 
 var app = builder.Build();
 
