@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "List the Customers";
+    //Layout = ""
+}
+
+@*<h1>List Customer</h1>*@
+
+<div class="container p-4">
+    <div class="row">
+        <div class="col-6">
+            <h2 class="text-primary">List Customer</h2>
+        </div>
+    </div>
+    <div class="cold-6">
+        <a asp-action="Create" class="btn btn-success text-white">Create Customer</a>
+    </div>
+    </div>
+<br />
+<br />
+<div class="p-3">
+    <table id="tblCustomer" class="table table-striped table-bordered" style="width: 100%">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>FirsName</td>
+                <td>LastName</td>
+                <td>Country</td>
+                <td>Phone</td>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+
+
+
+</div>
+
