@@ -74,6 +74,11 @@ namespace WebApplicationBilling.Repository
             }
         }
 
+        //public Task<T> GetByIdAsync(string url, int id, JsonConvert jsonConvert)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
         public async Task<bool> PostAsync(string url, T entity)
         {
            var request = new HttpRequestMessage(HttpMethod.Post, url);

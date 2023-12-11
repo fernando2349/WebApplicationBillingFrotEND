@@ -10,6 +10,6 @@ namespace WebApplicationBilling.Repository.Interfaces
         Task<bool> PostAsync(string url, T entity);
         Task<bool> UpdateAsync(string url, T entity);
         Task<bool> DeleteAsync(string url, int id);
-        Task<T> GetByIdAsync(string url, int id, JsonConvert jsonConvert);
+     //   Task<T> GetByIdAsync(string url, int id, JsonConvert jsonConvert);
     }
 }
