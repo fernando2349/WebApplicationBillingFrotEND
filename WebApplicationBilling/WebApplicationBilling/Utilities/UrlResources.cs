@@ -5,6 +5,8 @@
 
         public static string UrlBase = "https://webappbilling.azurewebsites.net/";
         public static string UrlCustomers = "api/Customers/";
+        public static string UrlSuppliers = "api/Suppliers/";
+        public static string UrlProducts = "api/Products/";
 
     }
 }
