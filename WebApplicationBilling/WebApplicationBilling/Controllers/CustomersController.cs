@@ -1,4 +1,4 @@
-﻿﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NuGet.Packaging.Core;
 using WebApplicationBilling.Models.DTO;
@@ -14,7 +14,7 @@ namespace WebApplicationBilling.Controllers
 
         public CustomersController(ICustomerRepository customerRepository)
         {
-                this._customerRepository = customerRepository;
+            this._customerRepository = customerRepository;
         }
 
         [HttpGet]
@@ -24,8 +24,8 @@ namespace WebApplicationBilling.Controllers
             return View(new CustomerDTO() { });
         }
 
-        
-        public async Task<IActionResult> GetAll()
+
+        public async Task<IActionResult> GetAllCustomers()
         {
             try
             {
@@ -98,7 +98,7 @@ namespace WebApplicationBilling.Controllers
             return View();
         }
 
-       
+
         [HttpDelete]
         public async Task<IActionResult> Delete(int id)
         {
