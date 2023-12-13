@@ -23,7 +23,7 @@ namespace WebApplicationBilling.Controllers
             return View(new ProductDTO() { });
         }
 
-
+        [HttpGet]
         public async Task<IActionResult> GetAllProduct()
         {
             try

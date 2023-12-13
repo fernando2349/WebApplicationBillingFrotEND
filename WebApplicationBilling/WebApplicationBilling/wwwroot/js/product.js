@@ -3,7 +3,7 @@
 });
 
 function loadProducts() {
-    fetch('/Products/GetAllProducts') // Asegúrate de reemplazar con la ruta correcta
+    fetch('/Products/GetAllProduct') // Asegúrate de reemplazar con la ruta correcta
         .then(response => response.json())
         .then(data => {
             initializeDataTable(data.data);
@@ -18,20 +18,19 @@ function initializeDataTable(products) {
         table = document.createElement('table');
         table.id = 'productsTable';
         table.className = 'display'; // Clase necesaria para DataTables
-        document.getElementById('productsContainer').appendChild(table);
+        document.getElementById('ProductsContainer').appendChild(table);
     }
 
     $(table).DataTable({
         responsive: true,
         data: products,
         columns: [
-            { title: "Id", data: "Id", className: "column-Id" },
-            {
-                title: "ProductName", data: "ProductName", className: "column-ProductName" },
-            { title: "SupplierId", data: "SupplierId", className: "column-SupplierId" },
-            { title: "UnitPrice", data: "UnitPrice", className: "column-UnitPrice" },
-            { title: "Package", data: "Package", className: "column-Package" },
-            { title: "IsDiscontinued", data: "IsDiscontinued", className: "column-IsDiscontinued" },
+            { title: "Id", data: "id", className: "column-Id" },
+            { title: "ProductName", data: "productName", className: "column-ProductName" },
+            { title: "SupplierId", data: "supplierId", className: "column-SupplierId" },
+            { title: "UnitPrice", data: "unitPrice", className: "column-UnitPrice" },
+            { title: "Package", data: "package", className: "column-Package" },
+            { title: "IsDiscontinued", data: "isDiscontinued", className: "column-IsDiscontinued" },
             {
                 title: "Acciones",
                 data: "id",
